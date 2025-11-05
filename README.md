@@ -1,14 +1,128 @@
-# University Course Registration System
-This is a C-based console application designed to help students manage their course registrations. It allows users to view, add, remove, and search for courses. Additionally, the system includes features to display suggested courses, sort courses alphabetically, and undo/redo actions. This system is designed for use by university students to simplify the course registration process.
+# 🎓 University Course Registration System (C Project)
 
-Features:
-View All Courses: Display a list of all available courses.
-Suggested Courses for Semester: View recommended courses for desire semester.
-Add Course: Add a course to the student's registration.
-Remove Course: Remove a course from the student's current registration.
-Display Registered Courses: View a list of courses that the student has currently registered for.
-Search for a Course by Code: Look up a course by its course code.
-Search for a Course by Title: Look up a course by its title.
-Sort Courses in Dictionary Order: Sort and display all available courses in alphabetical order.
-Undo Last Action: Revert the most recent action (add, remove, etc.).
-Redo Last Action: Reapply the most recent undone action.
+A **C-based University Course Registration System** that allows students to **search, add, remove, and manage courses** efficiently.  
+The system also supports **undo/redo operations**, **conflict checking**, and **credit limit validation**, making it both practical and educational.
+
+---
+
+## 📘 Features
+
+✅ **Add & Remove Courses**
+- Register or remove courses using their course code.  
+- Prevents exceeding the maximum allowed credits (default: 14).  
+
+✅ **Undo / Redo System**
+- Supports **undo** for the last add/remove action.  
+- Supports **redo** for undone operations.  
+
+✅ **Course Conflict Detection**
+- Detects **day/time clashes** automatically.  
+
+✅ **Course Search**
+- Search by **course code** or **course title**.  
+
+✅ **View Options**
+- Display all available courses.  
+- View **registered courses**.  
+- View **suggested courses** by semester.  
+
+✅ **Data Structures Used**
+- **Linked List** → For managing registered courses.  
+- **Stack** → For undo/redo operation tracking.  
+
+---
+
+## 🧠 Concepts Demonstrated
+- Structs and Typedefs  
+- Linked Lists  
+- Stack Implementation  
+- String Manipulation  
+- Function Modularization  
+- Dynamic Memory Allocation (`malloc`, `free`)  
+- Defensive Programming (overflow checks, validation)
+
+---
+
+## 🛠️ How to Compile and Run
+
+### **Using GCC**
+```bash
+gcc main.c -o course_system
+./course_system
+```
+
+### **Using Code::Blocks or Dev-C++**
+1. Create a new console project.  
+2. Copy the code into `main.c`.  
+3. Build and run the project.
+
+---
+
+## 🧾 Example Usage
+
+```
+Welcome to the University Course Registration System!
+
+1. View All Courses
+2. Search Course by Code
+3. Search Course by Title
+4. Add a Course
+5. Remove a Course
+6. Undo Last Action
+7. Redo Last Action
+8. View Registered Courses
+9. View Suggested Courses by Semester
+10. Exit
+```
+
+---
+
+## 🧩 Sample Output
+
+```
+Course CSE161 (Programming Language I) added successfully on Monday at 10:00 AM - 11:30 AM.
+Course CSE162 (Programming Language I Lab) added successfully on Wednesday at 2:00 PM - 4:00 PM.
+Undo: Course CSE162 removed.
+Redo: Course CSE162 added.
+```
+
+---
+
+## 📂 Project Structure
+
+```
+📁 CourseRegistrationSystem
+├── main.c                # Main program source code
+├── README.md             # Project documentation
+└── (optional) course.txt # Future extension for file saving
+```
+
+---
+
+## ⚙️ Constants
+| Constant | Description |
+|-----------|-------------|
+| `MAX_CREDITS` | Maximum credits a student can register (default: 14) |
+| `MAX` | Maximum stack size for undo/redo operations (default: 50) |
+
+---
+
+## 🚀 Future Improvements
+- 🔹 Add file I/O for saving registered courses  
+- 🔹 Implement student login with authentication  
+- 🔹 Create a graphical or terminal UI menu  
+- 🔹 Add prerequisite checking for advanced courses  
+
+---
+
+## 👨‍💻 Author
+**Mohammodullah Al Mahin**  
+🎓 BSc in Computer Science & Engineering  
+🏛️ Southeast University  
+
+🌐 [GitHub Profile](https://github.com/mahinexe)
+
+---
+
+## 📜 License
+This project is released under the **MIT License** — free to use, modify, and distribute.
